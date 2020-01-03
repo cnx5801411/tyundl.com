@@ -1,0 +1,59 @@
+{layout name="common/layout" /}
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">编辑地址</div>
+</header>
+
+<form action="" method="post" id="my1" >
+<div class="uc_flist aui-content aui-margin-b-15">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">收货人</div>
+                <div class="aui-list-item-input">
+                    <input name="name" value="{$add.name}" type="text" placeholder="请输入收货人姓名">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">电话</div>
+                <div class="aui-list-item-input">
+                    <input name="mobile" value="{$add.mobile}" type="tel" placeholder="请输入联系电话">
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">地域</div>
+                <div class="aui-list-item-input">
+                    <input readonly type="text" name="city" data-toggle="city-picker" value="{$add.city}" >
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">详细地址</div>
+                <div class="aui-list-item-input">
+                    <input type="text" name="info" value="{$add.info}"  placeholder="请输入详细地址">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{:token()}
+<input class="uc_flist_save" type="submit" value="保存">
+<input name="id" value="{$add.id}" type="hidden" >
+</form>
+<script src="__CDN__/assets/libs/fastadmin-citypicker/dist/js/city-picker.data.js"></script>
+<script src="__CDN__/assets/libs/fastadmin-citypicker/dist/js/city-picker.js"></script>
+<link rel="stylesheet" type="text/css" href="__CDN__/assets/libs/fastadmin-citypicker/dist/css/city-picker.css"/>
+
+<script>
+
+
+</script>

@@ -1,0 +1,2353 @@
+---------------------------------------------------------------
+[ 2019-11-14T10:34:58+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.739703s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:1.307831s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.038907s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:47:49+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028446s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.095170s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.059197s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:48:29+08:00 ] 127.0.0.1 POST www.sm.cn/admin.php/index/login?url=%2Fadmin.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004540s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_admin_log` [ RunTime:0.043912s ]
+[ sql ] [ SQL ] INSERT INTO `ty_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"url\":\"\\/admin.php\",\"__token__\":\"7eb08d881e11144d4e527d74c84cf411\",\"username\":\"admin\",\"captcha\":\"qurd\"}' , '/admin.php/index/login?url=%2Fadmin.php' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' , '127.0.0.1' , 1573699709) [ RunTime:0.249897s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:48:35+08:00 ] 127.0.0.1 POST www.sm.cn/admin.php/index/login?url=%2Fadmin.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005691s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_admin` [ RunTime:0.081466s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.025928s ]
+[ sql ] [ SQL ] UPDATE `ty_admin`  SET `logintime`=1573699715,`token`='1d3b3704-274e-42a0-8dda-542272c9d9bf',`updatetime`=1573699715  WHERE  `id` = 1 [ RunTime:0.244096s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_admin_log` [ RunTime:0.008891s ]
+[ sql ] [ SQL ] INSERT INTO `ty_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin.php\",\"__token__\":\"740556b4487504ae191ac1cc0842deb5\",\"username\":\"admin\",\"captcha\":\"kvv4\"}' , '/admin.php/index/login?url=%2Fadmin.php' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' , '127.0.0.1' , 1573699715) [ RunTime:0.052160s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:48:36+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001972s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.009726s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.173339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.009936s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003075s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `ty_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.021389s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:48:37+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002356s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002674s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.002851s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001526s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.012700s ]
+---------------------------------------------------------------
+[ 2019-11-14T10:48:41+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007256s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.009974s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.006485s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.007524s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002957s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_config` [ RunTime:0.300173s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_config` [ RunTime:0.002990s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.002236s ]
+---------------------------------------------------------------
+[ 2019-11-14T11:04:25+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/general/attachment?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003509s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.003569s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002901s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003432s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001879s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'general/attachment' LIMIT 1 [ RunTime:0.002372s ]
+---------------------------------------------------------------
+[ 2019-11-14T11:04:26+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/general/attachment/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573700665831
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002136s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002064s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001679s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003111s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001289s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_attachment` [ RunTime:0.427796s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ty_attachment` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.059869s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_attachment` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000640s ]
+---------------------------------------------------------------
+[ 2019-11-14T15:00:08+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.205596s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002376s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000568s ]
+---------------------------------------------------------------
+[ 2019-11-14T15:29:44+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[ sql ] [ DB ] CONNECT:[ UseTime:0.230830s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.013822s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801412' LIMIT 1 [ RunTime:0.003845s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13055859685' LIMIT 1 [ RunTime:0.110097s ]
+[ error ] [2]array_merge(): Argument #2 is not an array
+---------------------------------------------------------------
+[ 2019-11-14T15:31:53+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089476s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002442s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801412' LIMIT 1 [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13800295851' LIMIT 1 [ RunTime:0.000804s ]
+[ error ] [2]array_merge(): Argument #2 is not an array
+---------------------------------------------------------------
+[ 2019-11-14T15:32:18+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.352553s] [吞吐率：2.84req/s] [内存消耗：2,975.78kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.045258s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002634s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'manage_id',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:32:19+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.120695s] [吞吐率：8.29req/s] [内存消耗：2,009.50kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004539s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:32:19+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.132489s] [吞吐率：7.55req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010588s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:32:19+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.134087s] [吞吐率：7.46req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008743s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:32:19+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573716738
+[运行时间：0.100701s] [吞吐率：9.93req/s] [内存消耗：2,864.20kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005338s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573716738',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002647s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:32:34+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.200440s] [吞吐率：4.99req/s] [内存消耗：3,759.33kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003491s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => '1a0223aaad4143eb1a36c4e52cd3a0a0',
+  'username' => '5801412',
+  'password' => '5801411',
+  'mobile' => '13088945613',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003870s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001423s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002653s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801412' LIMIT 1 [ RunTime:0.001476s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088945613' LIMIT 1 [ RunTime:0.001146s ]
+[ error ] [2]array_merge(): Argument #2 is not an array[D:\www\www.sm.cn\application\common\library\Auth.php:165]
+---------------------------------------------------------------
+[ 2019-11-14T15:33:43+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.104704s] [吞吐率：9.55req/s] [内存消耗：2,975.89kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003928s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002180s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'manage_id',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:33:43+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.116772s] [吞吐率：8.56req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006619s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:33:43+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.133383s] [吞吐率：7.50req/s] [内存消耗：2,009.50kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000269s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009455s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:33:43+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.148870s] [吞吐率：6.72req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000139s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006835s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:33:43+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573716823
+[运行时间：0.124090s] [吞吐率：8.06req/s] [内存消耗：2,864.20kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000066s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006874s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573716823',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003106s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:33:52+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.130315s] [吞吐率：7.67req/s] [内存消耗：3,704.38kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007812s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => '7859b95bc64de01d12a4c2ad3864b8f2',
+  'username' => '5801413',
+  'password' => '5801411',
+  'mobile' => '13088965412',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003638s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001521s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001530s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801413' LIMIT 1 [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088965412' LIMIT 1 [ RunTime:0.002053s ]
+---------------------------------------------------------------
+[ 2019-11-14T15:33:58+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.211959s] [吞吐率：4.72req/s] [内存消耗：3,741.59kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005444s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => 'ced3bce054fbb0d60d5e7061f2ce2a50',
+  'username' => '5801413',
+  'password' => '5801411',
+  'mobile' => '13088965411',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002273s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001892s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002952s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801413' LIMIT 1 [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088965411' LIMIT 1 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user` (`username` , `password` , `email` , `mobile` , `level` , `score` , `avatar` , `nickname` , `salt` , `jointime` , `joinip` , `logintime` , `loginip` , `prevtime` , `status` , `createtime` , `updatetime`) VALUES ('5801413' , 'ebd59e1c07e3a9a03ff5510e26ab832c' , '' , '13088965411' , 1 , 0 , '' , '5801413' , '03zBs9' , 1573716838 , '127.0.0.1' , 1573716838 , '127.0.0.1' , 1573716838 , 'normal' , 1573716838 , 1573716838) [ RunTime:0.011569s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.001581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002408s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('1b7d6c9136631fe8154ccdc6b180b6b7624764ae' , 6 , 1573716838 , 1576308838) [ RunTime:0.000651s ]
+[ error ] [0]致命错误: Class 'app\common\library\DlUseragent' not found[D:\www\www.sm.cn\application\common\library\Auth.php:179]
+---------------------------------------------------------------
+[ 2019-11-14T15:34:39+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.126128s] [吞吐率：7.93req/s] [内存消耗：2,975.89kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006258s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003301s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'manage_id',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:34:40+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.095459s] [吞吐率：10.48req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006073s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:34:40+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.115116s] [吞吐率：8.69req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006093s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:34:40+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.122623s] [吞吐率：8.16req/s] [内存消耗：2,009.50kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006304s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:34:40+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573716879
+[运行时间：0.109855s] [吞吐率：9.10req/s] [内存消耗：2,864.20kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005214s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573716879',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003805s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:42:22+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.142281s] [吞吐率：7.03req/s] [内存消耗：3,741.59kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004282s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => '4f572e0cd168152cfefaae3bd16a3621',
+  'username' => '5801415',
+  'password' => '5801411',
+  'mobile' => '13088264582',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003253s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001335s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002277s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801415' LIMIT 1 [ RunTime:0.001170s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088264582' LIMIT 1 [ RunTime:0.001436s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user` (`username` , `password` , `email` , `mobile` , `level` , `score` , `avatar` , `nickname` , `salt` , `jointime` , `joinip` , `logintime` , `loginip` , `prevtime` , `status` , `createtime` , `updatetime`) VALUES ('5801415' , 'ca58630b90b55ce10118ba61cb8812ba' , '' , '13088264582' , 1 , 0 , '' , '5801415' , 'tHQa9L' , 1573717342 , '127.0.0.1' , 1573717342 , '127.0.0.1' , 1573717342 , 'normal' , 1573717342 , 1573717342) [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002299s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('c639bf54af07a1bcb23b939c3a1689cb140032f4' , 7 , 1573717342 , 1576309342) [ RunTime:0.000498s ]
+[ error ] [0]致命错误: Class 'app\common\library\DlUseragent' not found[D:\www\www.sm.cn\application\common\library\Auth.php:179]
+---------------------------------------------------------------
+[ 2019-11-14T15:43:45+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.092420s] [吞吐率：10.82req/s] [内存消耗：2,898.23kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004219s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => '4f572e0cd168152cfefaae3bd16a3621',
+  'username' => '5801415',
+  'password' => '5801411',
+  'mobile' => '13088264582',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003513s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:47+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.098857s] [吞吐率：10.12req/s] [内存消耗：2,976.05kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003845s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002183s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'manage_id',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:47+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.091749s] [吞吐率：10.90req/s] [内存消耗：2,009.50kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005630s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:47+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.087255s] [吞吐率：11.46req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006364s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:47+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.114501s] [吞吐率：8.73req/s] [内存消耗：2,009.53kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005395s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:48+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573717427
+[运行时间：0.098627s] [吞吐率：10.14req/s] [内存消耗：2,864.20kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004054s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573717427',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003012s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T15:43:58+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.227893s] [吞吐率：4.39req/s] [内存消耗：3,723.66kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004598s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => 'c8411286f96cf0df9dc11e6c97d3f2b2',
+  'username' => '5801415',
+  'password' => '5801411',
+  'mobile' => '13088295851',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002420s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ BEHAVIOR ] Run Closure @user_register_successed [ RunTime:0.000050s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001711s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002627s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801415' LIMIT 1 [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088295851' LIMIT 1 [ RunTime:0.000793s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user` (`username` , `password` , `email` , `mobile` , `level` , `score` , `avatar` , `nickname` , `salt` , `jointime` , `joinip` , `logintime` , `loginip` , `prevtime` , `status` , `createtime` , `updatetime`) VALUES ('5801415' , 'c4244084c7c8ceddeae615ae3d87cd02' , '' , '13088295851' , 1 , 0 , '' , '5801415' , 'Pn4liv' , 1573717438 , '127.0.0.1' , 1573717438 , '127.0.0.1' , 1573717438 , 'normal' , 1573717438 , 1573717438) [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002663s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('7563b74470df1d8405a3067dc36a5979c8e97161' , 8 , 1573717438 , 1576309438) [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_dl_useragent` [ RunTime:0.002273s ]
+[ sql ] [ SQL ] INSERT INTO `ty_dl_useragent` (`user_id` , `status` , `is_audit` , `manage_id` , `createtime` , `updatetime`) VALUES (8 , '0' , '0' , 1 , 1573717438 , 1573717438) [ RunTime:0.000560s ]
+---------------------------------------------------------------
+[ 2019-11-14T15:43:59+08:00 ] 127.0.0.1 GET www.sm.cn/
+[运行时间：0.279149s] [吞吐率：3.58req/s] [内存消耗：3,734.58kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000063s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004478s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001902s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\www\www.sm.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001375s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002045s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000575s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002329s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000776s ]
+---------------------------------------------------------------
+[ 2019-11-14T15:44:01+08:00 ] 127.0.0.1 GET www.sm.cn/favicon.ico
+[运行时间：0.115209s] [吞吐率：8.68req/s] [内存消耗：2,012.62kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006998s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573717441',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:04+08:00 ] 127.0.0.1 GET www.sm.cn/
+[运行时间：0.131331s] [吞吐率：7.61req/s] [内存消耗：3,739.23kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000118s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005950s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573717441',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002176s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\www\www.sm.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001324s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002272s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002124s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000678s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:12+08:00 ] 127.0.0.1 GET www.sm.cn/
+[运行时间：0.139439s] [吞吐率：7.17req/s] [内存消耗：3,739.01kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000130s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007600s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718465',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002166s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\www\www.sm.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001820s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002033s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001293s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:19+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[运行时间：0.188231s] [吞吐率：5.31req/s] [内存消耗：3,803.14kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000066s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004715s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002237s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001943s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001561s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000952s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:19+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573718479
+[运行时间：0.107076s] [吞吐率：9.34req/s] [内存消耗：3,705.77kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004400s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573718479',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002102s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001437s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002157s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001678s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000878s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:21+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.104064s] [吞吐率：9.61req/s] [内存消耗：2,010.59kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006242s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:21+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.122482s] [吞吐率：8.16req/s] [内存消耗：2,010.56kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006211s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:21+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.144437s] [吞吐率：6.92req/s] [内存消耗：2,010.59kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006390s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:21+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[运行时间：0.143926s] [吞吐率：6.95req/s] [内存消耗：3,805.12kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005103s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003399s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001993s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002253s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.001148s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:22+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.095240s] [吞吐率：10.50req/s] [内存消耗：2,010.59kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000080s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006900s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:22+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.132232s] [吞吐率：7.56req/s] [内存消耗：2,010.59kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006702s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:22+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.164452s] [吞吐率：6.08req/s] [内存消耗：2,010.56kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.014110s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:22+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573718481
+[运行时间：0.111902s] [吞吐率：8.94req/s] [内存消耗：3,707.74kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004525s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573718481',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002342s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001234s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001926s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000790s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:24+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/logout.html
+[运行时间：0.448130s] [吞吐率：2.23req/s] [内存消耗：3,735.32kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005108s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; uid=8; token=f5e2144d-a92a-45e4-a95b-e7531d42712c; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003993s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->logout[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ BEHAVIOR ] Run Closure @user_logout_successed [ RunTime:0.020894s ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002127s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002522s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001424s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.001194s ]
+[ sql ] [ SQL ] DELETE FROM `ty_user_token`    WHERE  `token` = '7563b74470df1d8405a3067dc36a5979c8e97161' [ RunTime:0.229362s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:25+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[运行时间：0.123408s] [吞吐率：8.10req/s] [内存消耗：3,392.81kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005690s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/logout.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003262s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001363s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002250s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000625s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:27+08:00 ] 127.0.0.1 GET www.sm.cn/
+[运行时间：0.151040s] [吞吐率：6.62req/s] [内存消耗：3,341.01kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006279s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002205s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001352s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.026573s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000704s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:29+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/login.html
+[运行时间：0.406555s] [吞吐率：2.46req/s] [内存消耗：2,983.39kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004173s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003015s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:29+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/frontend.css.map
+[运行时间：0.112219s] [吞吐率：8.91req/s] [内存消耗：2,010.03kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006289s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'frontend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:29+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.168624s] [吞吐率：5.93req/s] [内存消耗：2,010.06kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008552s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:29+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.289356s] [吞吐率：3.46req/s] [内存消耗：2,010.06kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021177s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:29+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573718488
+[运行时间：0.099364s] [吞吐率：10.06req/s] [内存消耗：2,868.41kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006657s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573718488',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004325s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:30+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.106298s] [吞吐率：9.41req/s] [内存消耗：2,981.16kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005999s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004327s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\user\register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'manage_id',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:31+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/fastadmin.css.map
+[运行时间：0.096561s] [吞吐率：10.36req/s] [内存消耗：2,010.06kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009998s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:31+08:00 ] 127.0.0.1 GET www.sm.cn/assets/css/bootstrap.css.map
+[运行时间：0.116830s] [吞吐率：8.56req/s] [内存消耗：2,010.06kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006421s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:31+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1573718490
+[运行时间：0.093687s] [吞吐率：10.67req/s] [内存消耗：2,868.63kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004946s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1573718490',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003587s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\www\www.sm.cn\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-14T16:01:43+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F
+[运行时间：0.652529s] [吞吐率：1.53req/s] [内存消耗：3,729.49kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005092s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.sm.cn',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '154',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://www.sm.cn/',
+  'invite_user_id' => '0',
+  'manage_id' => '1',
+  '__token__' => 'fffa79fb6491a4915b668b4a8060addd',
+  'username' => '5801419',
+  'password' => '5801411',
+  'mobile' => '13800295854',
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001918s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ D:\www\www.sm.cn\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ BEHAVIOR ] Run Closure @user_register_successed [ RunTime:0.000044s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001251s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801419' LIMIT 1 [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13800295854' LIMIT 1 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user` (`username` , `password` , `email` , `mobile` , `level` , `score` , `avatar` , `nickname` , `salt` , `jointime` , `joinip` , `logintime` , `loginip` , `prevtime` , `status` , `createtime` , `updatetime`) VALUES ('5801419' , '1bfd06a01abf0a63dc8ec2ed3c70b6f4' , '' , '13800295854' , 1 , 0 , '' , '5801419' , 'nl74v2' , 1573718502 , '127.0.0.1' , 1573718502 , '127.0.0.1' , 1573718502 , 'normal' , 1573718502 , 1573718502) [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 9 LIMIT 1 [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.322900s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('dec55bc2a4334d05c42c87caa6ddfcb803d3d010' , 9 , 1573718502 , 1576310502) [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_dl_useragent` [ RunTime:0.002179s ]
+[ sql ] [ SQL ] INSERT INTO `ty_dl_useragent` (`user_id` , `status` , `is_audit` , `manage_id` , `mycode` , `createtime` , `updatetime`) VALUES (9 , '0' , '0' , 1 , 'V67Fw8Zpe4J1OCyRBxuTHKijMDPNWGYt' , 1573718502 , 1573718502) [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2019-11-14T16:01:44+08:00 ] 127.0.0.1 GET www.sm.cn/
+[运行时间：0.132477s] [吞吐率：7.55req/s] [内存消耗：3,739.23kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004132s ]
+[ info ] [ LANG ] D:\www\www.sm.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=spfdelgsbtai2apd8qn4me9a2o; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1573630387,1573717441; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1573718473; uid=9; token=6c901f92-e4fd-4b5b-9c23-8969bc53e454',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2F',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.sm.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002254s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\www\www.sm.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\www\www.sm.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\www.sm.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001209s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002122s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'dec55bc2a4334d05c42c87caa6ddfcb803d3d010' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002418s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 9 LIMIT 1 [ RunTime:0.001301s ]

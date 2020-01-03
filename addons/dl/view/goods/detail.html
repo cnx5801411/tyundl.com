@@ -1,0 +1,112 @@
+{layout name="common/layout" /}
+
+<body>
+
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">商品详情</div>
+</header>
+<div class="orderImg">
+    
+    <!--这里改成图集-->
+    <img src="{$goods.focusimage}">
+
+</div>
+<ul class="aui-list aui-list-in pdlist">
+
+    <li class="aui-list-item">
+        <div class="aui-list-item-inner">
+            <div class="aui-list-item-title">{$goods.title}</div>
+            <div class="aui-list-item-right color-orange">￥{$goods.price}</div>
+        </div>
+    </li>
+
+    <li class="aui-list-item pd_list_inner">
+        <div class="aui-list-item-inner ">
+            <div class="aui-list-item-label">产品规格</div>
+            <div class="aui-list-item-input">{$goods.weight}g</div>
+        </div>
+    </li>
+
+    <li class="aui-list-item pd_list_inner">
+        <div class="aui-list-item-inner ">
+            <div class="aui-list-item-label">库存</div>
+            <div class="aui-list-item-input">{$goods.total}</div>
+        </div>
+    </li>
+
+    {volist name="goods['discountjson']" id="vo"}
+    <li class="aui-list-item pd_list_inner">
+        <div class="aui-list-item-inner ">
+            <div class="aui-list-item-label">{$vo.name}</div>
+            <div class="aui-list-item-input">{$vo.price|default=""}</div>
+        </div>
+    </li>
+    {/volist}
+    
+</ul>
+
+<div class="pd_title">商品信息</div>
+<div class="pd_content">{$goods.infocontent}</div>
+
+<a href="javascript:addcart({$goods.id});">添加购物车</a>
+<a href="javascript:delcart({$goods.id});">删除购物车</a>
+<a href="javascript:reduce({$goods.id});">减少数量</a>
+<script>
+function addcart(id){
+    $.ajax({ 
+        type: "POST", 
+        data :{goods_id:id},
+        dataType: "JSON", 
+        async: false, 
+        url: "{:url('/addons/dl/cart/add')}",
+        success: function(data) {
+            if (data.code == '1') {                               
+                // alert(data);
+            } else {                                   
+                alert(data.text);
+            }
+        }
+    });
+}
+
+function delcart(id){
+    $.ajax({ 
+        type: "POST", 
+        data :{goods_id:id},
+        dataType: "JSON", 
+        async: false, 
+        url: "{:url('/addons/dl/cart/del')}",
+        success: function(data) {
+            if (data.code == '1') {                               
+                // alert(data);
+            } else {                                   
+                alert(data.text);
+            }
+        }
+    });
+}
+
+function reduce(id){
+    $.ajax({ 
+        type: "POST", 
+        data :{goods_id:id},
+        dataType: "JSON", 
+        async: false, 
+        url: "{:url('/addons/dl/cart/reduce')}",
+        success: function(data) {
+            if (data.code == '1') {                               
+                // alert(data);
+            } else {                                   
+                alert(data.text);
+            }
+        }
+    });
+}
+
+</script>
+
+</body>
+

@@ -1,0 +1,135 @@
+{layout name="common/layout_nomenu" /}
+<form action="{:url('/addons/dl/order/buy')}" method="post" id="my1" >
+<div class="md_place">
+    <div class="md_place_left"></div>
+    <div class="md_place_center">
+        {notempty name="add" }
+            <a href="{:addon_url('dl/useraddress/choose')}">
+            <div class="md_place_name">收货人：{$add.name}<span class="aui-pull-right">{$add.mobile}</span></div>
+            <div class="md_place_street">收货地址：{$add.city}{$add.info}</div></a>
+            <input name="addid" value="{$add.id}" type="hidden" />
+        {else/}
+            <div class="md_place_choose"><a href="{:addon_url('dl/useraddress/choose')}">请选择常用地址</a></div>
+        {/notempty}
+    </div>
+    <a class="md_place_right" href=""></a>
+</div>
+
+<div class="myorder_card">
+    <div class="myorder_card_info">商品信息</div>
+
+        {volist name="goodslist.goods_list" id="goods"}
+            <div class="myorder_card_product">
+                <img src="{$goods.focusimage}">
+                <div class="myorder_card_num">
+                    <div>{$goods.title}</div>
+                    <div>{$goods.price}*{$goods.total_num}</div>
+                </div>
+            </div>
+            <input name="goods_id[]"     value="{$goods.id}" type="hidden" />
+            <input name="goods_num[]"    value="{$goods.total_num}" type="hidden" />
+        {/volist}
+
+        <div class="md_place_remarks" id="swkd">
+            <div class="md_place_remarks_left">商品重量</div>
+            <div class="md_place_remarks_right">{$goodslist['order_total_weight']}克</div>
+        </div>
+
+    <div class="md_place_remarks">
+        <div class="md_place_remarks_left">配送方式</div>
+        <div class="md_place_remarks_right">
+            <div class="sendway">
+                {volist name="exps" id="exp" k="i"}
+                    {eq name="i" value="1"}
+                        <span class="on" data-way="1" data-exid="{$exp.id}" data-yf="{$exp.weightprice}">{$exp.title}</span>
+                    {else/}   
+                        <span data-way="1" data-exid="{$exp.id}" data-yf="{$exp.weightprice}">{$exp.title}</span>
+                    {/eq}
+                {/volist}
+                
+                {eq name=":get_addon_config('dl')['sinceswitch']" value="on"}
+                    <span data-way="2">自提</span>
+                {/eq}
+            </div>
+        </div>
+    </div>
+
+    <div class="swway">
+        <div class="md_place_remarks" id="swkd">
+            <div class="md_place_remarks_left">配送</div>
+            <div class="md_place_remarks_right">快递(<span id="kdyf" style="color:#e63e43">￥{$exps[0]['weightprice']}</span>)</div>
+        </div>
+        {eq name=":get_addon_config('dl')['sinceswitch']" value="on"}
+            <div class="md_place_remarks" id="swzt" style="display: none;">
+                <div class="md_place_remarks_left">自提点</div>
+                <div class="md_place_remarks_right">
+
+                    <select id="ztid" dir="rtl" style="min-height:1.25rem;">
+                        {volist name="sinces" id="since" key="i"}
+                            {eq name="i" value="1"}
+                                <option selected="selected" value="{$since.id}">{$since.address}</option>
+                            {else/}
+                                <option value="{$since.id}">{$since.address}</option>
+                            {/eq}
+                        {/volist}
+                    </select>
+
+                </div>
+            </div>
+        {/eq}
+    </div>
+
+    <div class="md_place_remarks">
+        <div class="md_place_remarks_left">备注</div>
+        <div class="md_place_remarks_right"><input type="text" name="remark" placeholder="请留言"></div>
+    </div>
+</div>
+<div class="footer_order">
+    <span style="font-size:1.2rem">¥ <span id="gp"></span></span>
+    <span style="font-size:0.7rem">（含运费<span id="gy">{$exps[0]['weightprice']}</span>元）</span>
+    <a class="cart_checkout_btn" href="javascript:void(0)" id="checkout">立即下单</a>
+    <input name="total"         type="hidden" value="" />          <!-- 总价 -->
+    <input name="totalprice"    type="hidden" value="{$goodslist.order_total_price}" />          <!-- 商品价格 -->
+    <input name="weightprice"   type="hidden" value="" />          <!-- 快递运费 -->
+    <input name="sendtype"      type="hidden" value="1"/>          <!-- 发货方式 1:快递发货 2：自提点 -->
+    <input name="expid"         type="hidden" value="{$exps[0]['id']}" />          <!-- 快递ID -->
+    <input name="since"         type="hidden" value="" />          <!-- 自提点 -->
+</div>
+</form>
+<script>
+$("#checkout").click(function (){
+    $('#my1').submit();
+});
+$(".sendway span").click(function(){
+    $(this).addClass("on").siblings().removeClass("on");
+    var way = $(this).data("way");
+    //var ap = $("input[name='total']").val();
+    var gp = $("input[name='totalprice']").val();
+    //var gy = $("input[name='weightprice']").val();
+    var exid = $(this).data("exid");
+    if(way==1){
+        var yf = $(this).data("yf");
+    var ap = parseInt(gp) + parseInt(yf);
+        $("#swkd").show();
+        $("#swzt").hide();
+        $("input[name='sendtype']").val(1);
+        $("input[name='expid']").val(exid);
+        $("#gp").html(ap);
+        $("#gy").html(yf);
+        $("#kdyf").html("￥"+yf)
+    }
+    if(way==2){
+        $("#swkd").hide();
+        $("#swzt").show();
+        $("input[name='sendtype']").val(2);
+        var suncechoose = $("#ztid option:selected").val();
+        $("input[name='since']").val(suncechoose);
+        $("#gp").html(gp);
+        $("#gy").html(0);
+    }
+});
+$("#ztid").change(function(){
+    var suncechoose = $("#ztid option:selected").val()
+    $("input[name='since']").val(suncechoose);
+})
+</script>

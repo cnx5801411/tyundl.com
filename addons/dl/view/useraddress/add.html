@@ -1,0 +1,232 @@
+{layout name="common/layout" /}
+
+
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">新增地址</div>
+</header>
+
+<form action="" method="post" id="my1" >
+<div class="uc_flist aui-content aui-margin-b-15">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">收货人</div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="请输入收货人姓名" name="name" id="userName">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">电话</div>
+                <div class="aui-list-item-input">
+                    <input type="tel" placeholder="请输入联系电话" name="mobile" id="mobile">
+                </div>
+            </div>
+        </li>
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">地域</div>
+                    <div class="aui-list-item-input">
+                        <input readonly type="text" name="city" data-toggle="city-picker" >
+                    </div>
+                </div>
+            </li>
+
+
+<!--         <div id="city_1">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">省</div>
+                    <div class="aui-list-item-input">
+                        <select name="province" class="prov" id="province">
+                            <option>请选择</option>
+                        </select>
+                        <i class="aui-iconfont aui-icon-down uc_flist_sr"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">市</div>
+                    <div class="aui-list-item-input">
+                        <select name="city" class="city" id="city">
+                            <option>请选择</option>
+                        </select>
+                        <i class="aui-iconfont aui-icon-down uc_flist_sr"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">区</div>
+                    <div class="aui-list-item-input">
+                        <select name="area" class="dist" id="area" >
+                            <option>请选择</option>
+                        </select>
+                        <i class="aui-iconfont aui-icon-down uc_flist_sr"></i>
+                    </div>
+                </div>
+            </li>
+        </div> -->
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">详细地址</div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="请输入详细地址" name="info" id="address">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<input type="hidden" value="" name="url" />
+{:token()}
+<input class="uc_flist_save" type="submit" value="保存">
+</form>
+
+<!-- <button class="uc_flist_save" style="margin-top:10px; border:0;" id="openAddress">导入收货地址</button> -->
+
+<!-- <script src="__PUBLIC__/Home/Js/jquery.cityselect.js"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+<script src="__CDN__/assets/libs/fastadmin-citypicker/dist/js/city-picker.data.js"></script>
+<script src="__CDN__/assets/libs/fastadmin-citypicker/dist/js/city-picker.js"></script>
+<link rel="stylesheet" type="text/css" href="__CDN__/assets/libs/fastadmin-citypicker/dist/css/city-picker.css"/>
+
+<script>
+var codeWait = 60;
+function codeTime(o){
+    if (codeWait == 0) {
+        o.removeAttr("disabled");           
+        o.val("发送验证码").removeClass("msgCodeNo");
+        codeWait = 60;
+    } else {
+        o.attr("disabled", true).addClass("msgCodeNo");
+        o.val(codeWait + "秒后可重发");
+        codeWait--;
+        setTimeout(function() {
+            codeTime(o)
+        },
+        1000)
+    }
+}
+$(".msgCode").click(function(){
+    codeTime($(this))
+});
+
+var jsons = ""; 
+$(function() {
+
+    wx.config({
+
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '', // 必填，公众号的唯一标识
+        timestamp: '', // 必填，生成签名的时间戳
+        nonceStr: '', // 必填，生成签名的随机串
+        signature: '',// 必填，签名，见附录1
+        jsApiList: [
+            'openAddress'
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+
+    $.ajax({
+        type: "get",    
+        url: "__PUBLIC__/Home/Js/citydata.min.js",　　　
+        success: function(list) {
+            jsons = eval(list);
+            $.each(jsons, function (index, obj) {
+                $(".prov").append("<option value=" + obj.text + " data-opt="+ index +">" + obj.text + "</option>");
+            });
+        }
+    });
+
+    wx.ready(function () {
+
+         document.querySelector('#openAddress').onclick = function () {
+                var tt=wx.openAddress({
+                    success: function (res) {
+                        var userName        = res.userName;     // 收货人姓名
+                        var postalCode      = res.postalCode;   // 邮编
+                        var provinceName    = res.provinceName; // 国标收货地址第一级地址（省）
+                        var cityName        = res.cityName;     // 国标收货地址第二级地址（市）
+                        var countryName     = res.countryName;  // 国标收货地址第三级地址（国家）
+                        var detailInfo      = res.detailInfo;   // 详细收货地址信息
+                        var nationalCode    = res.nationalCode; // 收货地址国家码
+                        var telNumber       = res.telNumber;    // 收货人手机号码
+                        // alert(JSON.stringify(res));
+                        $('#userName').val(userName);
+                        $('#phone').val(telNumber);
+                    
+                        var pindex = $('#province').children("option[value='"+provinceName+"']").index();
+                        $('#province').find("option").eq(pindex).prop("selected",true);
+                        var keys1 = pindex - 1;
+                        if(keys1!=null){
+                            for(var i=0,l=jsons[keys1].children.length;i<l;i++){
+                                $(".city").append("<option value=" + jsons[keys1].children[i].text + " data-opt=" + i + " >" + jsons[keys1].children[i].text + "</option>");
+                            }
+                        }
+                        else{
+                            $(".city").html("<option>请选择</option>");  
+                        }
+                    
+                        var cindex = $('#city').children("option[value='"+cityName+"']").index();
+                        $('#city').find("option").eq(cindex).prop("selected",true);
+                        var keys2 = cindex - 1;
+                        $(".dist").html("<option>请选择</option>");
+                        if(keys2!=null){
+                            for(var i=0,l=jsons[keys1].children[keys2].children.length;i<l;i++){
+                                $(".dist").append("<option value=" + jsons[keys1].children[keys2].children[i] + " data-opt2=" + i + ">" + jsons[keys1].children[keys2].children[i] + "</option>");
+                            }
+                        }
+                        else{
+                            $(".dist").html("<option>请选择</option>");
+                        }
+                    
+                        $('#area').find("option[value='"+countryName+"']").prop("selected",true);
+
+                        $('#address').val(detailInfo);
+
+                        //alert(JSON.stringify(res));
+                    }
+                });
+
+          };
+    });
+
+ 
+    
+});
+
+$(".prov").change(function(){
+    var key = $(this).children("option:selected").data("opt");
+    $(".city").html("<option>请选择</option>");
+    if(key!=null){
+        for(var i=0,l=jsons[key].children.length;i<l;i++){
+            $(".city").append("<option value=" + jsons[key].children[i].text + " data-opt=" + i + " >" + jsons[key].children[i].text + "</option>");
+        }
+    }
+    else{
+        $(".city").html("<option>请选择</option>");  
+    }
+    $(".dist").html("<option>请选择</option>");
+})
+$(".city").change(function(){
+    var key1 = $(".prov").children("option:selected").data("opt");
+    var key2 = $(this).children("option:selected").data("opt");
+    $(".dist").html("<option>请选择</option>");
+    if(key2!=null){
+        for(var i=0,l=jsons[key1].children[key2].children.length;i<l;i++){
+            $(".dist").append("<option value=" + jsons[key1].children[key2].children[i] + " data-opt2=" + i + ">" + jsons[key1].children[key2].children[i] + "</option>");
+        }
+    }
+    else{
+        $(".dist").html("<option>请选择</option>");
+    }
+})
+
+</script>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title></title>
+<meta name="description" content="">
+
+<link rel="stylesheet" type="text/css" href="__ADDON__/css/aui/css/aui.2.0.css" />
+<link rel="stylesheet" type="text/css" href="__ADDON__/css/iconfont/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__ADDON__/css/weui.min.css" />
+<link rel="stylesheet" type="text/css" href="__ADDON__/css/style.css" />
+
+<script src="__ADDON__/js/jquery-1.10.2.min.js"></script>
+<script src="__ADDON__/js/yxMobileSlider.js"></script>
+<script src="__ADDON__/css/iconfont/iconfont.js"></script>
+<style type="text/css">
+.icon {
+    /* 通过设置 font-size 来改变图标大小 */
+    width: 1em; height: 1em;
+    /* 图标和文字相邻时，垂直对齐 */
+    vertical-align: -0.15em;
+    /* 通过设置 color 来改变 SVG 的颜色/fill */
+    fill: currentColor;
+    /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+        normalize.css 中也包含这行 */
+    overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+
+    {__CONTENT__}
+
+
+</body>
+<script>
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000}) 
+</script>
+</html>
+

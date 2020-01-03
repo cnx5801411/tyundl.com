@@ -1,0 +1,121 @@
+<include file="Public:head" />
+<body>
+
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);" >
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">审核代理</div>
+</header>
+
+<div class="apply">
+
+    <volist name="users" id="vo">
+        <div class="apply-box">
+            <div class="apply_info">
+                <div class="apply_name">姓名：{$vo.name} <eq name="vo['is_state']" value="-1"><span style="color: red;">(未通过)</span></eq></div>
+                <div class="apply_user">电话：{$vo.mobile}</div>
+            </div>
+            <textarea class="reason" placeholder="如果不通过请输入原因！">{$vo.reason}</textarea>
+            <div class="apply_btn">
+                <a class="apply_btn_success" id="showDialog1" href="javascript:void(0)" data-id="{$vo.id}">通过</a>
+                <neq name="vo['is_state']" value="-1">
+                <a class="apply_btn_fail" href="javascript:void(0)" data-id="{$vo.id}" >不通过</a>
+                </neq>
+            </div>
+        </div>
+    </volist>
+</div>
+
+<include file="Public:foot" />
+
+<script src="__PUBLIC__/Home/Js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/Home/Js/weui.min.js"></script>
+<script src="__PUBLIC__/Home/Js/common.js"></script>
+<script>
+
+//通过
+$('.apply_btn_success').click(function(){
+    
+    var id=$(this).data('id');
+    var reason = $(this).parent().siblings('.reason').val();
+    // console.log(reason);
+    weui.confirm('您确定审核通过吗？', function () {
+        tg(id,reason);
+    }, function () {
+        console.log('取消');
+    }, {
+        title: '提示'
+    });
+
+});
+
+//不通过
+$('.apply_btn_fail').click(function(){    
+
+    var id=$(this).data('id');
+    var reason = $(this).parent().siblings('.reason').val();
+    // console.log(reason);
+    weui.confirm('您确定不通过吗？', function () {
+        btg(id,reason);
+    }, function () {
+        console.log('取消');
+    }, {
+        title: '提示'
+    });
+
+});
+
+
+//通过
+function tg(id,reason){
+    var URL= "{:U('Agent/adopt')}";
+    $.ajax({url:URL,
+        async:true,
+        data:{id:id,reason:reason},
+        success: function(data) {
+        console.log(data);
+        var status  =   data.status;
+            if(status==1){
+                alert('审核成功!')
+                setTimeout(function() {
+                    window.location.reload();
+                },
+                2000)
+            }
+            else{
+                if(data.info!=''){
+                    alert(data.info);
+                }
+            }           
+        }
+    });
+}
+
+
+//不通过
+function btg(id,reason){
+    var URL= "{:U('Agent/noadopt')}";
+
+    $.ajax({url:URL,
+        async:false,
+        data:{id:id,reason:reason},
+        success: function(data) {
+            if(data.status==1){
+                // weui.alert('审核成功!');
+                window.location.reload();
+            }else{
+                if(data.info!=''){
+                    weui.alert(data.info);
+                }
+            }           
+        }
+    });
+
+}
+
+
+</script>
+
+</body>
+</html>

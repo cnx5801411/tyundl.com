@@ -1,0 +1,148 @@
+{layout name="common/layout" /}
+
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">我的订单</div>
+</header>
+
+<div class="myorder_menu">
+    <a {eq name="status" value="all"} class="on" {/eq}       href="{:addon_url('dl/userorder/index')}"><i class="iconfont">&#xe61b;</i>全部订单</a>
+    <a {eq name="status" value="wait"} class="on" {/eq}      href="{:addon_url('dl/userorder/index',array('status'=>'wait'))}"><i class="iconfont">&#xe659;</i>待支付</a>
+    <a {eq name="status" value="pay"} class="on" {/eq}       href="{:addon_url('dl/userorder/index',array('status'=>'pay'))}"><i class="iconfont">&#xe646;</i>待发货</a>
+    <a {eq name="status" value="transport"} class="on" {/eq} href="{:addon_url('dl/userorder/index',array('status'=>'transport'))}"><i class="iconfont">&#xe614;</i>待收货</a>
+    <a {eq name="status" value="finish"} class="on" {/eq}    href="{:addon_url('dl/userorder/index',array('status'=>'finish'))}"><i class="iconfont">&#xe66a;</i>完成</a>
+</div>
+
+{empty name="orders"}
+    <div class="noorder">您暂时还没有任何记录哦！</div>
+{else/}
+    {volist name="orders" id="vo"}
+        {switch name="vo['status']" }
+            {case value="0" }
+                <div class="myorder_card">
+                    <div class="myorder_card_info">
+                        {$vo.createtime|date="Y-m-d H:i:s",###}
+                        <span class="color-red aui-pull-right">待支付</span>
+                    </div>
+                    <a class="myorder_card_olproduct" href="{:addon_url('dl/userorder/detail',array('id'=>$vo['id']))}">
+                        <div class="myorder_card_olout">
+                            {volist name="vo['goods']" id="og"}
+                                <div class="myorder_card_ol">
+                                    <img src="{$og.gds.focusimage}">
+                                    <div class="myorder_card_olinfo">
+                                        <div>{$og.gds.title}</div>
+                                        <div>￥{$og.gds.price}*{$og.num}</div>
+                                    </div>
+                                </div>
+                            {/volist}
+                        </div>
+                    </a>
+                    <div class="myorder_card_data">共计{$vo.num}件商品  合计：{$vo.price} (含运费{$vo.freight}元)</div>
+                    <div class="myorder_card_btn">
+    <!--                     <a class="myorder_btn" href="javascript:void(0)" onclick="pay();">立即付款</a>
+     -->
+                        <a class="myorder_btn" href="">立即付款</a>
+                        <a class="myorder_btn myorder_btn_o" href="{:addon_url('dl/userorder/del',array('id'=>$vo['id']))}" >删除</a>
+                    </div>
+                </div>
+            {/case}
+
+            {case value="1"}
+                <div class="myorder_card">
+                    <div class="myorder_card_info">
+                        {$vo.createtime|date="Y-m-d H:i:s",###}
+                        <span class="color-red aui-pull-right">待发货</span>
+                    </div>
+                    <a class="myorder_card_olproduct" href="{:addon_url('dl/userorder/detail',array('id'=>$vo['id']))}">
+                        <div class="myorder_card_olout">
+                            {volist name="vo['goods']" id="og"}
+                                <div class="myorder_card_ol">
+                                    <img src="{$og.gds.focusimage}">
+                                    <div class="myorder_card_olinfo">
+                                        <div>{$og.gds.title}</div>
+                                        <div>￥{$og.gds.price}*{$og.num}</div>
+                                    </div>
+                                </div>
+                            {/volist}
+                        </div>
+                    </a>
+                    <div class="myorder_card_data">共计{$vo.num}件商品  合计：{$vo.price} (含运费{$vo.freight}元)</div>
+                    <div class="myorder_card_btn">
+                        {eq name="vo.sendtype" value="2"}
+                            <span style="float:left; font-size:0.6rem;">自提订单：</span>
+                        {/eq}
+                    </div>
+                </div>
+            {/case}
+            {case value="2"}
+                <div class="myorder_card">
+                    <div class="myorder_card_info">
+                        {$vo.createtime|date="Y-m-d H:i:s",###}
+                        <span class="color-red aui-pull-right">待收货</span>
+                    </div>
+                    <a class="myorder_card_olproduct" href="{:addon_url('dl/userorder/detail',array('id'=>$vo['id']))}">
+                        <div class="myorder_card_olout">
+                            {volist name="vo['goods']" id="og"}
+                                <div class="myorder_card_ol">
+                                    <img src="{$og.gds.focusimage}">
+                                    <div class="myorder_card_olinfo">
+                                        <div>{$og.gds.title}</div>
+                                        <div>￥{$og.gds.price}*{$og.num}</div>
+                                    </div>
+                                </div>
+                            {/volist}
+                        </div>
+                    </a>
+                    <div class="myorder_card_data">共计{$vo.num}件商品  合计：{$vo.price} (含运费{$vo.freight}元)</div>
+                    <div class="myorder_card_btn">
+                        <span style="float:left; font-size:0.6rem;">快递单号：{$vo.expresssn}<a href="https://m.kuaidi100.com/result.jsp?nu={$vo.expresssn}">查询快递</a></span>
+                        <a class="myorder_btn" href="{:addon_url('dl/userorder/confirm',array('id'=>$vo['id']))}">确认收货</a>
+                        <!-- <a class="myorder_btn myorder_btn_o" href="javascript:void(0)" onclick="del();">删除</a> -->
+                    </div>
+                </div>
+            {/case}
+            {case value="3"}
+                <div class="myorder_card">
+                    <div class="myorder_card_info">
+                        {$vo.createtime|date="Y-m-d H:i:s",###}
+                        <span class="color-red aui-pull-right">完成</span>
+                    </div>
+                    <a class="myorder_card_olproduct" href="{:addon_url('dl/userorder/detail',array('id'=>$vo['id']))}">
+                        <div class="myorder_card_olout">
+                            {volist name="vo['goods']" id="og"}
+                                <div class="myorder_card_ol">
+                                    <img src="{$og.gds.focusimage}">
+                                    <div class="myorder_card_olinfo">
+                                        <div>{$og.gds.title}</div>
+                                        <div>￥{$og.gds.price}*{$og.num}</div>
+                                    </div>
+                                </div>
+                            {/volist}
+                        </div>
+                    </a>
+                    <div class="myorder_card_data">共计{$vo.num}件商品  合计：{$vo.price} (含运费{$vo.freight}元)</div>
+                    <div class="myorder_card_btn">
+                        <span style="float:left; font-size:0.6rem;">快递单号：{$vo.expresssn}<a href="https://m.kuaidi100.com/result.jsp?nu={$vo.expresssn}">查询快递</a></span>
+                        <!-- <a class="myorder_btn" href="javascript:void(0)" onclick="pay();">立即付款</a> -->
+                        <!-- <a class="myorder_btn myorder_btn_o" href="javascript:void(0)" onclick="del();">删除</a> -->
+                    </div>
+                </div>
+            {/case}
+
+            {default /}
+
+        {/switch}
+    {/volist}
+    
+    {$page}
+
+{/empty} 
+
+<script>
+$(".myorder_card_olout").each(function(){
+    var mnum = $(this).children(".myorder_card_ol").length;
+    $(this).width(85*mnum);
+})
+</script>

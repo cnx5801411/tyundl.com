@@ -1,0 +1,140 @@
+{layout name="common/layout" /}
+
+<div class="alert">
+    <div class="alert-box">
+        <div class="alert_content">您确定审核通过吗？</div>
+        <div class="alert_btn">
+            <span class="alert_btn_cancel">取消</span>
+            <span class="alert_btn_sure">确定</span>
+        </div>
+    </div>
+</div>
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);" >
+    <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">添加代理</div>
+</header>
+<div class="orderImg">
+    <img src="__ADDON__/jmages/1.jpg">
+</div>
+<form id="form" action="" method="post" id="myform" class="apply">
+<div class="uc_flist aui-content aui-margin-b-15 apply" style="padding:0.5rem">
+    <ul class="aui-list aui-form-list">
+        
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    *姓名
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" name="name" placeholder="请输入姓名" maxlength="6" datatype="*,zh1-6" errormsg="请填写正确的姓名">
+                    <div class="Validform_checktip">请填写正确的姓名</div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    *电话
+                </div>
+                <div class="aui-list-item-input">
+                    <input name="mobile" id="mobile" type="tel" maxlength="11" placeholder="请填写联系电话" maxlength="11" datatype="*7-15,n" errormsg="请填写正确的联系电话">
+                    <div class="Validform_checktip">请填写正确的联系电话</div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    *验证码
+                </div>
+                <div class="aui-list-item-input">
+                    <input name="code" type="text" placeholder="请填写验证码">
+                    <input class="msgCode" type="button" value="发送验证码" >
+                </div>
+            </div>
+        </li>
+
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    *微信号
+                </div>
+                <div class="aui-list-item-input">
+                    <input name="wx_name" type="text" placeholder="请输入微信号" datatype="*" errormsg="请填写支付宝">
+                    <div class="Validform_checktip">请填写支付宝</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+    <input type="hidden" value="" name="key" />
+    <input  name="sub" class="uc_flist_save" type="submit" value="保存" >
+</form>
+
+<script src="__ADDON__/js/jquery.cityselect.js"></script>
+<script src="__ADDON__/js/Validform_v5.3.2_min.js"></script>
+<script src="__ADDON__/js/weui.min.js"></script>
+<script src="__ADDON__/js/common.js"></script>
+<script>
+var codeWait = 60;
+function codeTime(o){
+    if (codeWait == 0) {
+        o.removeAttr("disabled");
+        o.val("发送验证码").removeClass("msgCodeNo");
+        codeWait = 60;
+    } else {
+        o.attr("disabled", true).addClass("msgCodeNo");
+        o.val(codeWait + "秒后可重发");
+        codeWait--;
+        setTimeout(function() {
+            codeTime(o)
+        },
+        1000)
+    }
+}
+var sta = 1;
+$(".msgCode").click(function(){
+    var mobile = $('#mobile').val();
+    if(mobile==''){
+        weui.alert('请输入手机号码！');
+        return false;
+    }
+    $.ajax({
+        type: "POST", //用POST方式传输
+    　　dataType: "JSON", //数据格式:JSON
+    　　url: '', //目标地址
+        data: "mobile="+  mobile,
+        error: function (XMLHttpRequest, textStatus, errorThrown) { },
+    　　success: function (msg){
+            if(msg.status==1){
+                codeTime($(".msgCode"))
+            }
+            else{
+                weui.alert(msg.info);
+            }
+        }
+    });
+})
+$(".apply").Validform({
+    btnSubmit:".uc_flist_save",
+    datatype:{
+        "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+    },
+    tiptype:function(msg,o,cssctl){
+        if(!o.obj.is("form")){
+            var objtip=o.obj.siblings(".Validform_checktip");
+            cssctl(objtip,o.type);
+            objtip.text(msg);
+            setTimeout(function() {
+                objtip.removeClass("Validform_wrong");
+            },
+            2000)
+        }
+    }
+});
+
+</script>

@@ -1,0 +1,152 @@
+{layout name="common/layout" /}
+
+<body class="cartbody">
+<div class="cart_cover">
+    <div class="cart_coverbg"></div>
+    <div class="cart_coverImg">
+        <img src="">
+    </div>
+</div>
+<form action="{:url('/addons/dl/cart/checkout')}" method="post" id="my1" >
+<div class="cart">
+    {volist name="goodslist.goods_list" id="goods"}
+        <div class="cart_box" data-tid="{$goods.type_id}">
+            <div class="cart_img" data-cimg="{$goods.focusimage}">
+                <img src="{$goods.focusimage}">
+            </div>
+            <div class="cart_info">
+                <div class="cart_info_name"><a href="{:url('/addons/dl/goods/detail',array('gid'=>$goods.id))}">{$goods.title}</a></div>
+                <div class="cart_info_data"><span>￥{$goods.price}</span>/{$goods.weight}g</div>
+                <div class="cart_info_price">原价:￥{$goods.price}<span style="float:right">销量:{$goods.sales}</span></div>
+                <div class="cart_info_stock">库存:{$goods.total}</div>
+                <div class="cart_info_num">
+                    <span class="cart_info_reduce">-</span>
+                    <input name="goods_num[]" class="cart_num" type="tel" value="{$goods.total_num}" data-price="">
+                    <span class="cart_info_add">+</span>
+                    <input name="goods_id[]" value="{$goods.id}" type="hidden" />
+                </div>
+            </div>
+        </div>
+    {/volist}
+</div>
+<div class="cart_checkout">
+    <div class="cart_checkout_left">
+        <i class="iconfont">&#xe690</i>
+        <div class="cart_checkout_num">{$goodslist.order_total_num}</div>
+    </div>
+    <div class="cart_checkout_right">
+        <div class="cart_checkout_price">
+            <div class="cart_checkout_all">共:<span style="color:#e63e43">￥<span id="allmoney">{$goodslist.order_total_price}</span></span></div>
+            <div class="cart_checkout_notice">不含运费<!-- (<span id="tmoney">0</span>)元 --></div>
+        </div>
+        <div class="cart_checkout_btn" id="confirm">提交订单</div>
+        <input type="hidden" name="confirm" value="1"/>
+    </div>
+</div>
+<div class="cart_kind" id="actionSheet">
+    <span id="kindname">全部分类</span>
+    <i class="icon iconfont">&#xe621;</i>
+</div>
+</form>
+</body>
+<script src="__ADDON__/js/weui.min.js"></script>
+<script>
+$("#confirm").click(function (){
+    $('#my1').submit();
+});
+$(".cart_num").keyup(function(){
+    var value = $(this).val();
+    if((/^(\+|-)?\d+$/.test( value ))&&value>=0){
+        var val = value.replace(/\b(0+)/gi,"")
+        $(this).val(val)
+    }
+    else{
+        // alert("数量中请输入正整数！");
+        $(".cart_num").val("0");
+        return false;
+    }
+    all();
+})
+$(".cart_info_add").click(function(){
+    var num = parseFloat($(this).prev().val()) + 1;
+    $(this).prev().val(num);
+    all();
+})
+$(".cart_info_reduce").click(function(){
+    var onum = parseFloat($(this).next().val());
+    if(onum<=0){
+        return;
+    }
+    else{
+        var num = parseFloat($(this).next().val()) - 1;
+        $(this).next().val(num)
+    }
+    all();
+})
+function all(){
+    var all = 0;
+    var anum = 0;
+    var pnum = $(".cart_num").length;
+    $(".cart_num").each(function(){
+        var iprice = parseFloat($(this).data("price"));
+        var inum = parseFloat($(this).val());
+        all = all + iprice*inum
+        anum = anum + inum;
+    })
+    $("#allmoney").html(all.toFixed(2));
+    if(anum>99){
+        $(".cart_checkout_num").html("99+")
+    }
+    else{
+        $(".cart_checkout_num").html(anum)
+    }
+}
+$("#actionSheet").click(function(){
+    weui.actionSheet([
+    {
+        label: '全部分类',
+        onClick: function () {
+             $(".cart_box").show();
+             $("#kindname").html('全部分类')
+        }
+    },
+    {
+        label: '',
+        onClick: function () {
+             var typeid = 1;
+             select(typeid);
+             $("#kindname").html('')
+        }
+    },
+], [
+    {
+        label: '取消',
+        onClick: function () {
+            console.log('取消');
+        }
+    }
+], {
+    className: 'custom-classname'
+})
+})
+function select(typeid){
+    $(".cart_box").each(function(){
+        var dataid = $(this).data("tid");
+        if(dataid==typeid){
+            $(this).show();
+        }
+        else{
+            $(this).hide();
+        }
+    })
+}
+$(".cart_img").click(function(){
+    var imgUrl = $(this).data("cimg");
+    $(".cart_cover").show();
+    $(".cart_coverImg img").attr("src",imgUrl);
+})
+$(".cart_coverbg").click(function(){
+    $(".cart_cover").hide();
+    $(".cart_coverImg img").removeAttr("src");
+})
+</script>

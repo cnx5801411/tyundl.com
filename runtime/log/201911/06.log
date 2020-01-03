@@ -1,0 +1,525 @@
+---------------------------------------------------------------
+[ 2019-11-06T10:53:12+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.141566s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.578303s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.293498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.040773s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001316s ]
+---------------------------------------------------------------
+[ 2019-11-06T10:53:36+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002994s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002539s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002359s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000694s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:05+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002132s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002006s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.003460s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000845s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:06+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001950s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002258s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002365s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000893s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:11+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002617s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.003398s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002648s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000666s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:11+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002119s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002934s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002960s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001020s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:16+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001783s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002236s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002326s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:16+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001867s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002021s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002215s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000622s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:17+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001830s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001956s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002280s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000666s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:17+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001772s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001939s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002452s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000655s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:19+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/changepwd.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001778s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001976s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002570s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000950s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:20+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001984s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002649s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002460s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000824s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:21+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001818s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001963s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.003217s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001068s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:21+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001845s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002332s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.003822s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001348s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:22+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002077s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.003068s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.003627s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000996s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:22+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001933s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002838s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.003236s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001020s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:23+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/changepwd.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003006s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001871s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002312s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001769s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:23+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002192s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001840s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000851s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:23+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002193s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001702s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001754s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:30:23+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001791s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001062s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000619s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:31:03+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001929s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001138s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001213s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000623s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:31:03+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001771s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001276s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000775s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:31:53+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/logout.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002690s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001015s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001471s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000953s ]
+[ sql ] [ SQL ] DELETE FROM `ty_user_token`    WHERE  `token` = '8b8ee93a113122e93db51ab982f2a64892473e86' [ RunTime:0.216249s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:31:55+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002372s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000506s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:32:24+08:00 ] 127.0.0.1 POST www.sm.cn/api/sms/send.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002447s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_sms` [ RunTime:0.016792s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_sms` WHERE  `mobile` = '17628294856'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.054583s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ty_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1573007542 LIMIT 1 [ RunTime:0.091727s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.005793s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '17628294856' LIMIT 1 [ RunTime:0.043291s ]
+[ sql ] [ SQL ] INSERT INTO `ty_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '17628294856' , '6834' , '127.0.0.1' , 1573011143) [ RunTime:0.215801s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:32:35+08:00 ] 127.0.0.1 POST www.sm.cn/api/validate/check_sms_correct.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002626s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_sms` [ RunTime:0.003020s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_sms` WHERE  `mobile` = '17628294856'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001055s ]
+---------------------------------------------------------------
+[ 2019-11-06T11:32:44+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2Findex%2Fuser%2Findex.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001762s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_sms` [ RunTime:0.002261s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_sms` WHERE  `mobile` = '17628294856'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000512s ]
+[ error ] [8]未定义变量: email
+---------------------------------------------------------------
+[ 2019-11-06T15:22:29+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2Findex%2Fuser%2Findex.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040183s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.006539s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801411' LIMIT 1 [ RunTime:0.024778s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:34+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2Findex%2Fuser%2Findex.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035387s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '58014110' LIMIT 1 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088295856' LIMIT 1 [ RunTime:0.000590s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:44+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/register.html?url=http%3A%2F%2Fwww.sm.cn%2Findex%2Fuser%2Findex.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001782s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '58014110' LIMIT 1 [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `mobile` = '13088295855' LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user` (`username` , `password` , `email` , `mobile` , `level` , `score` , `avatar` , `nickname` , `salt` , `jointime` , `joinip` , `logintime` , `loginip` , `prevtime` , `status` , `createtime` , `updatetime`) VALUES ('58014110' , '1e9bb62a9a7cadc83914f63174a6dbd1' , '' , '13088295855' , 1 , 0 , '' , '58014110' , 'DzwUY0' , 1573024963 , '127.0.0.1' , 1573024963 , '127.0.0.1' , 1573024963 , 'normal' , 1573024963 , 1573024963) [ RunTime:0.037510s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.031133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.002627s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('cb5bee088002e19b7e02af797ff1bcf8e9adaea1' , 3 , 1573024963 , 1575616963) [ RunTime:0.001118s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:45+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002065s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001341s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000837s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:46+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001886s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001278s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000659s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:49+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003023s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001212s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000742s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:49+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001830s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001439s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000813s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:50+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/changepwd.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001988s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001432s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000802s ]
+---------------------------------------------------------------
+[ 2019-11-06T15:22:50+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001882s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001777s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000660s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:09:35+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/changepwd.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002115s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001462s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000737s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:09:35+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001777s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001604s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000646s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:39:02+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001924s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000706s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:39:03+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001710s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:40:25+08:00 ] 127.0.0.1 POST www.sm.cn/admin.php/index/login?url=%2Fadmin.php%2Fdashboard%3Fref%3Daddtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006429s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_admin` [ RunTime:0.038399s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.002066s ]
+[ sql ] [ SQL ] UPDATE `ty_admin`  SET `logintime`=1573029624,`token`='839fcaf8-62bb-4700-a9e4-dba2f9e58563',`updatetime`=1573029624  WHERE  `id` = 1 [ RunTime:0.135382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_admin_log` [ RunTime:0.043937s ]
+[ sql ] [ SQL ] INSERT INTO `ty_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin.php\\/dashboard?ref=addtabs\",\"__token__\":\"25a447a94ac6937b7da10bb6b9626af8\",\"username\":\"admin\",\"captcha\":\"tyed\"}' , '/admin.php/index/login?url=%2Fadmin.php%2Fdashboard%3Fref%3Daddtabs' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' , '127.0.0.1' , 1573029625) [ RunTime:0.046981s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:40:25+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/dashboard?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001894s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.003361s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.078439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.027137s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003029s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:40:26+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011516s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002077s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.002080s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `ty_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.032604s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:40:27+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002698s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.004593s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003493s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001994s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.092319s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:43:54+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011959s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002078s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003939s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002208s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'user/user' LIMIT 1 [ RunTime:0.002141s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:43:55+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573029834773
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020863s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002192s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001710s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.002266s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001870s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_group` [ RunTime:0.031845s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 1 [ RunTime:0.001927s ]
+[ sql ] [ SQL ] SELECT `user`.`id`,`user`.`group_id`,`user`.`username`,`user`.`nickname`,`user`.`password`,`user`.`salt`,`user`.`email`,`user`.`mobile`,`user`.`avatar`,`user`.`level`,`user`.`gender`,`user`.`birthday`,`user`.`bio`,`user`.`money`,`user`.`score`,`user`.`successions`,`user`.`maxsuccessions`,`user`.`prevtime`,`user`.`logintime`,`user`.`loginip`,`user`.`loginfailure`,`user`.`joinip`,`user`.`jointime`,`user`.`createtime`,`user`.`updatetime`,`user`.`token`,`user`.`status`,`user`.`verification`,group.id AS group__id,group.name AS group__name,group.rules AS group__rules,group.createtime AS group__createtime,group.updatetime AS group__updatetime,group.status AS group__status FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 0,10 [ RunTime:0.002723s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:03+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011102s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001318s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000752s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:04+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002104s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001616s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000695s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:04+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001865s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000940s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001825s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001360s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:04+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001855s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001075s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000708s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:06+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001777s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001215s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:06+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001732s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001493s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000800s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:08+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002044s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001337s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000640s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:11+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001852s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001505s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000729s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:20+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001912s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001195s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001664s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001215s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:45:21+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002215s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001528s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000958s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:46:34+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001999s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001460s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001486s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000880s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:46:35+08:00 ] 127.0.0.1 GET www.sm.cn/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001754s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001086s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.002070s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001008s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:46:42+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/logout.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001883s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001731s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' LIMIT 1 [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001326s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000735s ]
+[ sql ] [ SQL ] DELETE FROM `ty_user_token`    WHERE  `token` = 'cb5bee088002e19b7e02af797ff1bcf8e9adaea1' [ RunTime:0.083911s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:46:45+08:00 ] 127.0.0.1 GET www.sm.cn/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002189s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000426s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:47:28+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001802s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000414s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:47:30+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001867s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000468s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:45+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002333s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002301s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001820s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.002170s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001303s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:46+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001850s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.001976s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.001959s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001250s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.068697s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `ty_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001271s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:46+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001982s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.003499s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.002678s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'user/user' LIMIT 1 [ RunTime:0.000748s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:47+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002752s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.003897s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.004825s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001878s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `ty_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000910s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:47+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573030126939
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011900s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.003782s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003398s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_group` [ RunTime:0.002638s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 1 [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT `user`.`id`,`user`.`group_id`,`user`.`username`,`user`.`nickname`,`user`.`password`,`user`.`salt`,`user`.`email`,`user`.`mobile`,`user`.`avatar`,`user`.`level`,`user`.`gender`,`user`.`birthday`,`user`.`bio`,`user`.`money`,`user`.`score`,`user`.`successions`,`user`.`maxsuccessions`,`user`.`prevtime`,`user`.`logintime`,`user`.`loginip`,`user`.`loginfailure`,`user`.`joinip`,`user`.`jointime`,`user`.`createtime`,`user`.`updatetime`,`user`.`token`,`user`.`status`,`user`.`verification`,group.id AS group__id,group.name AS group__name,group.rules AS group__rules,group.createtime AS group__createtime,group.updatetime AS group__updatetime,group.status AS group__status FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 0,10 [ RunTime:0.001591s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:47+08:00 ] 127.0.0.1 GET www.sm.cn/admin.php/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1573030126940
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002340s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_group_access` [ RunTime:0.002911s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `ty_auth_group_access` `aga` LEFT JOIN `ty_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_auth_rule` [ RunTime:0.003365s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `ty_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001910s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_group` [ RunTime:0.003191s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 1 [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT `user`.`id`,`user`.`group_id`,`user`.`username`,`user`.`nickname`,`user`.`password`,`user`.`salt`,`user`.`email`,`user`.`mobile`,`user`.`avatar`,`user`.`level`,`user`.`gender`,`user`.`birthday`,`user`.`bio`,`user`.`money`,`user`.`score`,`user`.`successions`,`user`.`maxsuccessions`,`user`.`prevtime`,`user`.`logintime`,`user`.`loginip`,`user`.`loginfailure`,`user`.`joinip`,`user`.`jointime`,`user`.`createtime`,`user`.`updatetime`,`user`.`token`,`user`.`status`,`user`.`verification`,group.id AS group__id,group.name AS group__name,group.rules AS group__rules,group.createtime AS group__createtime,group.updatetime AS group__updatetime,group.status AS group__status FROM `ty_user` `user` LEFT JOIN `ty_user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 0,10 [ RunTime:0.001817s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:48:57+08:00 ] 127.0.0.1 GET www.sm.cn/index/index/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002111s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001731s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.001232s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:49:00+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002267s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001233s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000560s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:49:12+08:00 ] 127.0.0.1 GET www.sm.cn/index/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001741s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000441s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:49:17+08:00 ] 127.0.0.1 GET www.sm.cn/index/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001934s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001139s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:54:30+08:00 ] 127.0.0.1 POST www.sm.cn/index/user/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004527s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001761s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `username` = '5801411' LIMIT 1 [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000839s ]
+[ sql ] [ SQL ] UPDATE `ty_user`  SET `successions`=2,`maxsuccessions`=2,`prevtime`=1572944395,`logintime`=1573030470,`updatetime`=1573030470  WHERE  `id` = 2 [ RunTime:0.000905s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001526s ]
+[ sql ] [ SQL ] INSERT INTO `ty_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('137855e6cf90ef6b360eb46f6d94f6cc98aa848e' , 2 , 1573030470 , 1575622470) [ RunTime:0.000699s ]
+---------------------------------------------------------------
+[ 2019-11-06T16:54:31+08:00 ] 127.0.0.1 GET www.sm.cn/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002380s ] mysql:host=127.0.0.1;dbname=sm_cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user_token` [ RunTime:0.001653s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user_token` WHERE  `token` = '137855e6cf90ef6b360eb46f6d94f6cc98aa848e' LIMIT 1 [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ty_user` [ RunTime:0.001393s ]
+[ sql ] [ SQL ] SELECT * FROM `ty_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000808s ]

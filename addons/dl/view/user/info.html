@@ -1,0 +1,34 @@
+{layout name="common/layout" /}
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="{:addon_url('dl/user/index')}">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">个人信息</div>
+</header>
+<form id="form" action="" method="post" id="myform" class="apply">
+<div class="uc_flist aui-content aui-margin-b-15 ">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    姓名
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" name="name" value="" placeholder="请输入姓名" maxlength="20"  errormsg="请填写姓名">                    
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    联系电话
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" name="mobile" value="" placeholder="联系电话" maxlength="20" >
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<input class="uc_flist_save" type="submit" value="保存">
+</form>

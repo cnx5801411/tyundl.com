@@ -1,0 +1,62 @@
+{layout name="common/layout" /}
+
+<div class="uc_top">
+    <a href="{:addon_url('dl/agent/qrcode')}"><img src=""></a>
+    <div class="uc_top_name">{$user.nickname}</div>
+</div>
+
+<div class="uc_table">
+    <a href="{:addon_url('dl/userorder/index')}">
+        <i class="icon iconfont">&#xe611;</i>
+        我的订单
+    </a>
+    <a href="">
+        <i class="icon iconfont">&#xe689;</i>
+        下级代理
+    </a>
+    <a href="{:addon_url('dl/agent/register')}">
+        <i class="icon iconfont">&#xe691;</i>
+        添加代理
+    </a>
+    <a href="">
+        <i class="icon iconfont">&#xe608;</i>
+        修改密码
+    </a>
+    <a href="">
+        <i class="icon iconfont">&#xe604;</i>
+        历史奖金
+    </a>
+    <a href="{:url('/addons/dl/useraddress/index')}">
+        <i class="icon iconfont">&#xe6dc;</i>
+        收货地址管理
+    </a>
+</div>
+
+<div class="uc_list aui-content aui-margin-b-15">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-header"></li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <a href=""><i class="icon iconfont">&#xe61d;</i>下级代理审核</a>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <a href="{:url('/addons/dl/user/info')}"><i class="icon iconfont">&#xe60b;</i>修改个人信息</a>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <a href=""><i class="icon iconfont">&#xe606;</i>收货地址管理</a>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <a href=""><i class="icon iconfont">&#xe645;</i>退出</a>
+            </div>
+        </li>
+    </ul>
+</div>

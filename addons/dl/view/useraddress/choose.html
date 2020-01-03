@@ -1,0 +1,39 @@
+{layout name="common/layout" /}
+<style>
+.icon{
+    width: 1.3em;
+    height: 1.3em;
+}
+</style>
+<header class="aui-bar aui-bar-nav header_common">
+    <a class="aui-pull-left aui-btn" href="javascript:window.history.go(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">选择地址</div>
+</header>
+<div class="address">
+    {volist name="list" id="vo"}
+        <div class="address-card">
+            <img class="address_img" src="__ADDON__/images/userImgDefault.jpg">
+            <a class="address-box" href="{:addon_url('dl/useraddress/setdefault',array('id'=>$vo['id']))}">
+                <div class="address_info">
+                    <div class="address_name">{$vo.name}</div>
+                    <div class="address_phone">{$vo.mobile}</div>
+                </div>
+                <div class="address_street">{$vo.city}{$vo.info}</div>
+            </a>
+            <div class="address_act">
+                <a href="{:addon_url('dl/useraddress/edit',array('id'=>$vo['id']))}"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qianzi"></use></svg>编辑</a>
+                <a href="{:addon_url('dl/useraddress/del',array('id'=>$vo['id']))}"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-Trash"></use></svg>删除</a>
+            </div>
+        </div>
+    {/volist}
+    <div class="address-add">
+        <a href="{:addon_url('dl/useraddress/add')}" class="aui-btn aui-btn-block">+ 新增收货地址</a>
+    </div>
+</div>
+
+<script>
+$(".address-box").click(function(){
+})
+</script>

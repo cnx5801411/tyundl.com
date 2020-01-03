@@ -1,0 +1,34 @@
+{layout name="common/layout" /}
+
+<body class="shareBG">
+
+<div id='wx_logo' style='margin:0 auto;display:none;'>
+    <!--分享图标-->
+    <img src='/Public/Home/Images/shareIcon.jpg' />
+</div>
+
+<header class="aui-bar aui-bar-nav header_common">
+
+    <a class="aui-pull-left aui-btn" href="javascript:history.go(-1);">
+
+        <span class="aui-iconfont aui-icon-left"></span>
+
+    </a>
+
+    <div class="aui-title">二维码</div>
+
+</header>
+
+
+<div class="qrcode">
+    <img class="qrcodehead" src="{$user['avatar']|default='__ADDON__/images/userImgDefault.jpg'}">
+    <p style="font-size:1rem; font-weight:bold; margin-bottom:0.5rem; color:#fff;"></p>
+    <img src="{$qrcode}">
+    <p style="color:#fff">手指长按识别二维码</p>
+</div>
+
+
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+</body>
